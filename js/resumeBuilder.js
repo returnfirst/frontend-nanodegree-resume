@@ -30,7 +30,7 @@ bio.display = function() {
   var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
   $("#header").append(formattedWelcomeMsg).append(formattedBioPic);
 
-  if(bio.skills.length > 0) {
+  if (bio.skills.length > 0) {
     $('#header').append(HTMLskillsStart);
     for (skill in bio.skills) {
       var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
@@ -61,8 +61,8 @@ var education = {
   }]
 }
 
-education.display = function(){
-  for(school in education.schools) {
+education.display = function() {
+  for (school in education.schools) {
     $("#education").append(HTMLschoolStart);
     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name).replace('#', education.schools[school].url);
     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
@@ -77,14 +77,14 @@ education.display = function(){
   if (education.onlineCourses.length > 0) {
     $(".education-entry:last").append('<br><br><br>');
     $(".education-entry:last").append(HTMLonlineClasses);
-    for(course in education.onlineCourses) {
+    for (course in education.onlineCourses) {
       var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title).replace('#', education.onlineCourses[course].url);;
       var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
       var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
       $(".education-entry:last")
-      .append(formattedOnlineTitle + formattedOnlineSchool)
-      .append(formattedOnlineDates)
-      .append('<br>');
+        .append(formattedOnlineTitle + formattedOnlineSchool)
+        .append(formattedOnlineDates)
+        .append('<br>');
     }
   }
 };
@@ -112,7 +112,7 @@ var work = {
 }
 
 work.display = function() {
-  for(job in work.jobs) {
+  for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -155,7 +155,7 @@ var projects = {
 }
 
 projects.display = function() {
-  for(project in projects.projects) {
+  for (project in projects.projects) {
     $("#projects").append(HTMLprojectStart);
 
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
