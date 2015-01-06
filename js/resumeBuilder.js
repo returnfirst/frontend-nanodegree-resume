@@ -9,9 +9,9 @@ var bio = {
   "welcomeMessage": "Hi, everyone. My name is JY Jin. Nice meet you.",
   "skills": ["awesomeness", "programming", "learning", "JS", "WebGL"],
   "bioPic": "images/fry.jpg"
-}
+};
 
-bio.display = function() {
+bio.display = function () {
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   $("#header").append(formattedName).append(formattedRole);
